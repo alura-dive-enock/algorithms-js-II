@@ -9,13 +9,13 @@ function mergeSort(array, nestingLevel = 0) {
     const middle = Math.floor(array.length / 2);
     const part1 = mergeSort(array.slice(0, middle), nestingLevel + 1);
     const part2 = mergeSort(array.slice(middle, array.length), nestingLevel + 1);
-    array = ordena(part1, part2);
+    array = orders(part1, part2);
   }
 
   return array;
 }
 
-function ordena(part1, part2) {
+function orders(part1, part2) {
   let currentPositionPart1 = 0 
   let currentPositionPart2 = 0
   const result = []
